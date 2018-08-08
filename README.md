@@ -34,9 +34,9 @@ You will need BIND and Python 3 with Flask (`pip install flask`).
 2. Copy the template `yourdomain.com.zone` file to the BIND primary zone file directory, renaming the file and replacing the two instances of _yourdomain.com_ with the name used in #1 and instances of _yourssldns.com_ with this host's publicly-addressable name. This file may be copied and repeated as necessary for any number of domains.
 3. Edit the `ssl_renewals.py` script to set the proper interface to listen on. The default will listen only on 127.0.0.1. **WARNING:** You should not expose this to the open Internet, it is meant to be run either on a local network or on a VPN interface only:
 
-    daemon.run(host='127.0.0.1', port=8119)
+    `daemon.run(host='127.0.0.1', port=8119)`
 
-The `ssl_renewals.py` script needs to be able to modify your BIND zone file(s) and restart BIND, so you'll have to ensure it has permissions to do so or run it as root as your own risk.
+The `ssl_renewals.py` script needs to be able to modify your BIND zone file(s) and restart BIND, so you'll have to ensure it has permissions to do so or run it as root at your own risk.
 
 ## Using
 
