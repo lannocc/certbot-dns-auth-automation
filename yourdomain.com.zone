@@ -1,0 +1,13 @@
+$TTL 5s
+$ORIGIN _acme-challenge.yourdomain.com.
+@              IN     SOA   yourssldns.com. hostmaster.yourdomain.com. (
+               2018063000 ; serial number
+               1s         ; refresh =  1 second
+               15M        ; update retry = 15 minutes
+               3W12h      ; expiry = 3 weeks + 12 hours
+               2h20M      ; minimum = 2 hours + 20 minutes
+               )
+
+ IN NS  yourssldns.com.
+ IN TXT "THIS WILL BE REPLACED AUTOMATICALLY"
+
